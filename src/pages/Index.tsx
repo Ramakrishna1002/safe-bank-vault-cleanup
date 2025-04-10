@@ -49,11 +49,13 @@ const Index = () => {
           
           <div className="mt-6 border-t border-white/20 pt-6">
             <p className="text-sm mb-2">For educational purposes:</p>
-            <Link to="/security-practice">
-              <Button variant="outline" className="text-white border-white hover:bg-white hover:text-bank-primary">
-                Try SQL Injection Practice Site
-              </Button>
-            </Link>
+            <Button 
+              variant="outline" 
+              className="text-white border-white hover:bg-white hover:text-bank-primary"
+              onClick={() => navigate('/security-practice')}
+            >
+              Try SQL Injection Practice Site
+            </Button>
             <p className="text-xs mt-2 opacity-60">
               A simulated vulnerable site for security awareness (testfire.net clone)
             </p>
