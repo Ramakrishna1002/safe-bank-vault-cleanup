@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +36,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -97,5 +91,31 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .bank-card {
+    @apply bg-gradient-to-br from-bank-primary to-bank-secondary rounded-xl shadow-lg text-white overflow-hidden relative;
+  }
+  
+  .bank-card-pattern {
+    @apply absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.2)_0%,_transparent_50%)];
+  }
+  
+  .transaction-item {
+    @apply flex items-center justify-between p-4 border-b border-gray-100 hover:bg-gray-50 transition-colors;
+  }
+  
+  .input-field {
+    @apply w-full rounded-md border border-gray-200 p-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-bank-secondary;
+  }
+  
+  .btn-primary {
+    @apply bg-bank-primary text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-bank-secondary text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors;
   }
 }
